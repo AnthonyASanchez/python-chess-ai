@@ -1,4 +1,4 @@
-# Dependencies
+ # Dependencies
 Python-Chess
 # Minimax
 The minimax algorithm can be visualized as a tree, at the bottom of this tree we have an evaluation function determining the value of each outcome. We can specify the depth that the tree will travel to, in this example we travel to a depth of 4.
@@ -8,7 +8,7 @@ At the bottom of this tree each node has a value that we will use to evaluate wh
 </div>
 At the top of the tree you start searching for the maximum of its child nodes. Each recursive call will change whether the node is looking for a maximum or minimum (hence the name minimax). The ai is the first call (root node) searching for the maximum node, it is assuming that the opponenent will 
 pick the outcome (child node / branch) that will give it the minimum amount of points. So the ai is looking for the maximum out of the
-minimumnodes.Inthediagramaboveontheleftmostnodeatajdepthof3,choosesthemaximumofthetwobelow-10.Theparentofthatnodechoosestheminimumofitschildnodes-10,therootnodechoosesthemaxofit'schildren-10.Afterthevaluesaredetermined,thealgorithmwilltakethepaththatwillgiveitthehighestvalue.
+minimumnodes.In the diagram above on the left most node at a depth of 3, chooses the maximum of the two below-10.The parent of that node chooses the minimum of its child nodes -10, the root node chooses the max of it's children-10. After the values are determined, the algorithm will take the path that will give it the highest value.
 
 This algorithm does pick the most optimal path but the lower the depth it traverses the longer it takes to compute. This might not seem scary in a simple game like checkers or even chess (if your depth isn't that big) but when this algorithm is used on games like go, the time to compute every possible outcome takes too long for even super computers to finish in a timely manner.
 
